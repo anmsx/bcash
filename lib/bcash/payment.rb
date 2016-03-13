@@ -23,7 +23,7 @@ module Bcash
 				button_html = content_tag('button', 'Pagar com Bcash!', type: "submit")
 			end
 
-			Haml::Engine.new(form_content).render(nil, package: self.package, options: self.options, button_html: button_html)			
+			Haml::Engine.new(form_content).render(self, package: self.package, options: self.options, button_html: button_html)			
 		end
 	end
 end
